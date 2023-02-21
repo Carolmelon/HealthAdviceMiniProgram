@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>卓越壹生后台管理登录</title>
+{#    <script>#}
+{#        setInterval(_=>{#}
+{#            window.location.reload();#}
+{#        }, 1000)#}
+{#    </script>#}
+  </head>
+  <body style="min-width:1365px;min-height:550px;">
+    <div style="height: 6px;position: absolute;left:0;right:0;top:0;background-color: #957bbe;width: 100%"></div>
+    <div style="margin: 20px; min-height: 550px;">
+        <div style="display: inline-block;min-width: 800px;width: 60%;height:550px;">
+            <img src="/wx_mini/getProjectImg/logo.jpg" width="400px">
+        </div>
+        <div style="display: inline-block;min-width: 400px;text-align: right;width: 30%;height:550px;margin-left:20px;">
+            <div style="">
+                <img src="/wx_mini/getProjectImg/miniprogram_text.png" width="200px">
+            </div>
+            <div style="width: 350px;border: 1px solid #eee; border-radius: 10px;padding: 20px;border-left: 5px solid #957bbe;box-shadow: 0 0 3px 3px #eee;background-color: #fff;color: #888888;margin-top:50px;">
+                <form method="post" id="loginForm" onsubmit="return checkForm();">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">账号:</label>
+                    <input type="text" class="form-control" id="username" name="zyys" aria-describedby="emailHelp" placeholder="请输入账号" required>
+        {#            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>#}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">密码:</label>
+                    <input type="password" class="form-control" id="password" name="zyys_password"  placeholder="请输入密码" required>
+                  </div>
+                <input name="hidden_password" id="hidden" style="display: none">
+        {#          <div class="form-check">#}
+        {#            <input type="checkbox" class="form-check-input" id="exampleCheck1">#}
+        {#            <label class="form-check-label" for="exampleCheck1">Check me out</label>#}
+        {#          </div>#}
+                    <div style="text-align: center">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                    {% if err_msg %}
+                    <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
+                      账号不存在或密码错误
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; bottom: 0; left: 0; right: 0;color: #999999;font-size: 12px;padding-bottom: 5px;">
+        <p>蜀ICP备17026426号-1</p>
+        - Powered by 李荣升 -
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    function checkForm() {
+{#        'hidden'#}
+        var form = document.getElementById('loginForm');
+        var username = document.querySelector("#username")
+        var password = document.querySelector("#password")
+        var hidden = document.querySelector("#hidden")
+        hidden.value = password.value
+        password.value = ''
+        console.log("点击了登录")
+        console.log(username.value)
+        console.log(hidden.value)
+        return true;
+    }
+  </script>
+  </body>
+</html>

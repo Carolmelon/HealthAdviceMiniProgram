@@ -1,0 +1,34 @@
+<view style='background-color:#fff'>
+  <view style='height:40px;position:relative'>
+    <view style='display:inline-block;float:left;margin-left:10px;margin-top:10px;font-size:12px'>{{tradeData.time}}</view>
+    <view style='display:inline-block;float:right;margin-right:10px;margin-top:10px;font-size:14px;font-weight:bold'>
+      <text>共{{tradeData.amount}}件,</text>
+      <text>总额:</text>
+      <text style='color:#ffaa00'> ￥{{tradeData.total_price}}</text>
+    </view>
+  </view>
+  <view style='height:80px;position:relative'>
+    <image wx:if="{{tradeData.img}}" style='height:70px;width:100px;margin-left:7px;' src='{{url_prefix+tradeData.img}}'></image>
+    <image wx:if="{{!tradeData.img}}" style='height:70px;width:100px;margin-left:7px;' src='../img/pic_big_default.jpg'></image>
+  </view>
+</view>
+
+<view style='margin-top:10px;min-height:40px;background-color:#fff'>
+  <view style='display:inline-block;float:left;margin-left:10px;margin-top:10px;font-size:14px'>
+    支付方式
+  </view>
+  <view style='display:inline-block;float:right;margin-top:10px;margin-right:10px;font-size:14px'>
+    <text style='color:#ffaa00'>在线支付</text>
+    <text style='padding-left:10px;color:#aaa'>></text>
+  </view>
+</view>
+
+<view style='margin-top:10px;min-height:40px;background-color:#fff;position:fixed;bottom:0;left:0;right:0'>
+  <view style='display:inline-block;float:left;margin-left:10px;margin-top:10px;font-size:16px;font-weight:bold'>
+    <text>实付款:</text>
+    <text style='color:#ffaa00'> ￥{{tradeData.total_price}}</text>
+  </view>
+  <view style='display:inline-block;float:right;font-size:14px;width:40%'>
+    <button bindtap='payMoney' type='primary'>立即付款</button>
+  </view>
+</view>

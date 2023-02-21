@@ -1,0 +1,21 @@
+<!--pages/videoQuery/videoQuery.wxml-->
+<view class='page'>
+  <image src='../img/sp-2.jpg' style='width:100%; height: 500px; position:absolute; z-index:0;'></image>
+  <view style='position:absolute; width:100%; height: 500px;padding-top:30px;'>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;line-height:2em;">
+      <text style="margin:0px;padding:0px;font-size:20px;color:#666666;font-weight:bolder">不排队，不挂号</text> 
+    </view>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;line-height:2em;">
+      <text style="margin:0px;padding:0px;font-size:20px;color:#666666;font-weight:bolder">享受一对一专属咨询</text> 
+    </view>
+    <text style="color:#909090;font-family:&quot;font-size:14px;text-align:justify;white-space:normal;"></text>
+
+    <view style="text-align:center;padding-top:10px;">
+      <text>长按按二维码添加专属医生！</text>
+      <image bindtap='handleImagePreview' style='width:60%; margin-top: 30px;' src='../img/gr.jpg'></image>
+      <view style='height:30px;'></view>
+      <text style='color:white'>No queuing, no registration, \none to one exclusive consultation!</text>
+    </view>
+  </view>
+</view>
+<include src="../footer/footer.wxml" />

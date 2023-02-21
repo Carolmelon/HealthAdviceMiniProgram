@@ -1,0 +1,10 @@
+/* pages/components/header.wxss */
+@import "../../weui.wxss";
+
+page {
+  background-color: #ffffff;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+

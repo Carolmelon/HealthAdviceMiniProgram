@@ -1,0 +1,183 @@
+<include src="../header/header.wxml" />
+
+<view bindtap='call' style='font-size: 20px; text-align: center; color:#888'>咨询热线：15884176782</view>
+<view class='icons'>
+  <view style='height: 10px'></view>
+  <view class='iconsInner'>
+    <view class="page__bd" style='padding-bottom: 0px;'>
+      <view class="weui-grids">
+        <block wx:for="{{grids}}" wx:key="{{item.index}}">
+          <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" style='width:50px;height:50px' src="{{item.img}}" />
+            <view class="weui-grid__label">{{item.name}}</view>
+          </navigator>
+        </block>
+        <!-- 跳转个人中心 -->
+        <block>
+          <navigator open-type="switchTab" url="../usercenter/usercenter" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" style='width:50px;height:50px' src="../img/grzx.png" />
+            <view class="weui-grid__label">个人档案</view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view style='height: 10px'></view>
+  <view style='background-color:#fff'>
+    <view bindtap='gotoOtherPage' data-name='aboutUs' style='height: 40px;border-bottom:1px dashed #ddd;position:relative'>
+      <view style='color:rgb(30, 126, 166)'>
+      <view style='position:absolute;left:5px;bottom:2px;width:5px;height:30px;background-color:rgb(30, 126, 166)'>
+      </view>
+      <view style='position:absolute;left:18px; bottom:2px;font-weight:bold;font-size:20px;'>
+        关于我们
+      </view>
+      <view style='position:absolute;right:10px;bottom:0;'>
+        <image src='../img/right1.png' 
+        style='width:30px; height:30px'></image>
+      </view>
+      </view>
+    </view>
+
+    <view style='padding-left:5px;padding-right:5px;'>
+      <text decode="{{true}}" style='color:rgb(144, 144, 144);line-height:2em;font-size:16px'>&nbsp; &nbsp; &nbsp; &nbsp;卓越壹生健康管理有限公司（简称卓越医生），公司位于美丽的酒城----泸州，专注为客户提供全面和优质的个性化健康管理服务，公司率先引入先进的居家护理服务理念……
+      </text>
+    </view>
+  </view>
+
+
+  <view style='height: 10px'></view>
+  <view style='min-height:200px; background-color:#fff'>
+    <view bindtap='gotoOtherPage' data-name='jkzn' style='height: 40px;border-bottom:1px dashed #ddd;position:relative'>
+      <view style='color:rgb(30, 126, 166)'>
+      <view style='position:absolute;left:5px;bottom:2px;width:5px;height:30px;background-color:rgb(30, 126, 166)'>
+      </view>
+      <view style='position:absolute;left:18px; bottom:2px;font-weight:bold;font-size:20px;'>
+        健康指南
+      </view>
+      <view style='position:absolute;right:10px;bottom:0;'>
+        <image src='../img/right1.png' 
+        style='width:30px; height:30px;'></image>
+      </view>
+      </view>
+    </view>
+
+    <view wx:for="{{articleDatas.articles}}" wx:key="{{item.id}}" style='padding-left:5px;padding-right:5px;position:relative;min-height:200px;'>
+    <!-- {{item.digest}}{{item.time}} -->
+      <view data-id='{{item.id}}' bindtap='gotoArticleDetail' style='font-size:18px; color:#444'>{{item.title}}</view>
+      <view style='position:absolute;left:15rpx;top:30px;'>
+        <image style='height:270rpx;width:330rpx;border-radius:10rpx;' src='{{url_prefix + item.img}}'></image>
+      </view>
+      <view style='position:absolute;right:0;top:30px;width:380rpx;'>
+        <view>{{item.digest}}
+          <view data-id='{{item.id}}' bindtap='gotoArticleDetail' style='color:red'>【详细】</view>
+        </view>
+      </view>
+      <view style='position:absolute;right:5rpx;bottom:5rpx;'>{{item.time}}</view>
+    </view>
+  </view>
+
+  <view style='height: 10px'></view>
+  <view style='min-height:200px; background-color:#fff'>
+    <view bindtap='gotoOtherPage' data-name='usercenter' data-method='tab' style='height: 40px;border-bottom:1px dashed #ddd;position:relative'>
+      <view style='color:rgb(30, 126, 166)'>
+      <view style='position:absolute;left:5px;bottom:2px;width:5px;height:30px;background-color:rgb(30, 126, 166)'>
+      </view>
+      <view style='position:absolute;left:18px; bottom:2px;font-weight:bold;font-size:20px;'>
+        健康档案
+      </view>
+      <view style='position:absolute;right:10px;bottom:0;'>
+        <image src='../img/right1.png' 
+        style='width:30px; height:30px'></image>
+      </view>
+      </view>
+    </view>
+
+    <view style='position:relative;min-height:520px;margin-top:5px'>
+      <view style='position:absolute;right:0;top:0;'>
+        <image style='width:750rpx;heigth:800rpx;' src='../img/o4l9.jpg'></image>
+      </view>
+      <view style='position:absolute;bottom:0;margin-bottom:40rpx;'>
+        <text decode="{{true}}" style='color:rgb(144, 144, 144);line-height:2em;font-size:16px'>&nbsp; &nbsp; &nbsp; &nbsp;我们提供病历、检验报告、体检报告等电子档案的保管服务，为您就诊提供完善的既往病史和检验记录，以便医生准确制订医疗计划。同时，我们还提供健康咨询、协助预约挂号、检验报告代查询等增值服务，为您诊前提供专业健康指导和医疗信息，节省您排队挂号和往返医院取检验结果所花费的大量时间！\n</text>
+        <button bindtap='gotoOtherPage' data-name='usercenter' data-method='tab' type='primary'>体检报告</button>
+      </view>
+    </view>
+  </view>
+
+  <view style='height: 10px'></view>
+  <view style='height:300px; background-color:#fff'>
+    <view style='height: 40px;border-bottom:1px dashed #ddd;position:relative'>
+      <view style='color:rgb(30, 126, 166)'>
+      <view style='position:absolute;left:5px;bottom:2px;width:5px;height:30px;background-color:rgb(30, 126, 166)'>
+      </view>
+      <view style='position:absolute;left:18px; bottom:2px;font-weight:bold;font-size:20px;'>
+        专家预约
+      </view>
+      <view style='position:absolute;right:10px;bottom:0;'>
+        <image src='../img/right1.png' 
+        style='width:30px; height:30px'></image>
+      </view>
+      </view>
+    </view>
+
+    <view style='position:relative; min-height:250px;margin-top:5px'>
+      <view style='position:absolute;right:0;top:0;'>
+        <image style='width:750rpx;heigth:400px;' src='../img/0yrd.jpg'></image>
+      </view>
+      <view style='position:absolute;left:10px;top:20px;width:270px;heigth:250px;line-height:2em;'>
+        <view style='font-weight:bold;font-size:18px;color:rgb(30, 126, 166)'>
+          卓越壹生健康管理
+        </view>
+        <view style='font-size:17px;'>就诊策划、预约挂号、陪同就诊、复诊提示，药品代购！</view>
+        <view style='font-size:18px;color:rgb(30, 126, 166)'>热线：15884176782</view>
+        <view style='height:20px;'></view>
+        <view style='width:50%'>
+          <button bindtap='gotoOtherPage' data-name='zjyy' type='primary'>马上预约</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='height: 10px'></view>
+  <view style='height:300px; background-color:#fff'>
+    <view style='height: 40px;border-bottom:1px dashed #ddd;position:relative'>
+      <view style='color:rgb(30, 126, 166)'>
+      <view style='position:absolute;left:5px;bottom:2px;width:5px;height:30px;background-color:rgb(30, 126, 166)'>
+      </view>
+      <view style='position:absolute;left:18px; bottom:2px;font-weight:bold;font-size:20px;'>
+        联系方式
+      </view>
+      <view style='position:absolute;right:10px;bottom:0;'>
+        <image src='../img/right1.png' 
+        style='width:30px; height:30px'></image>
+      </view>
+      </view>
+    </view>
+
+    <view style='position:relative; min-height:250px;margin-top:5px'>
+      <view style='position:absolute;right:0;top:0;'>
+        <image style='width:750rpx;heigth:400px;' src='../img/lx.jpg'></image>
+      </view>
+      <view style='position:absolute;left:10px;top:10px;line-height:2em;'>
+        <view style='font-size:18px;color:rgb(30, 126, 166)'>
+        卓越壹生健康管理有限公司
+        </view>
+        <view>地址：泸州步步高广场11楼11号</view> 
+        <view>联系：陈先生</view> 
+        <view>热线：15884176782</view> 
+        <view>邮箱：1312232602@qq.com</view> 
+        <view>官网：www.sczyys.com</view> 
+      </view>
+    </view>
+  </view>
+
+  <view style='height: 20px'></view>
+</view>
+
+<view bindtap='handleImagePreview1'>
+  <include src="../footer/footer.wxml" />
+</view>
+
+<view wx:if="{{!open}}" style='position:fixed; left:0; right:0;top:0; bottom:0;opacity:1.0; background-color:#fff;z-index:100'>
+  
+</view>

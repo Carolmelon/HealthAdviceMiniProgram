@@ -1,0 +1,143 @@
+<view>
+  <view style='position:relative;'>
+    <image style='width:100%;' src='../img/zjyy.jpg'></image>
+    <view style='position:absolute;bottom:7px;height:80px;width:100%;background-color:blue;opacity:0.3;'>
+    </view>
+    <view style='position:absolute;bottom:7px;height:80px;width:100%;'>
+      <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;color:#FFFFFF;"><text style='font-weight:bold'>专家预约（仅骨科开放）<br />
+            </text></text>
+      </view>
+      <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;color:#FFFFFF;"><text style="margin:0px;padding:0px;font-size:10px;">— —</text>
+        <text style="margin:0px;padding:0px;font-size:10px;"><br />
+            </text></text>
+      </view>
+      <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#FFFFFF;">Expert appointment</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- head完结 -->
+  <view style='background:#FFFFFF;'>
+    <view style="text-align:center;padding-top:10px;padding-bottom:10px;">
+      <text style="color:#3C78D8;font-family:&quot;font-size:17px;text-align:center;white-space:normal;font-weight:bold;">注：在您代购前请阅读这篇操作说明！</text>
+    </view>
+
+    <view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;background-color:#E7F1F3;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;"><text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);font-weight:bold">步骤一：</text></text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;background-color:#E7F1F3;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#3C78D8;">仔细填写下方表单信息,</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;background-color:#E7F1F3;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#3C78D8;">提交后</text>
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;"><text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;color:#3C78D8;">请点击本文底部【立即购买】按钮</text>。</text>
+      </view>
+    </view>
+
+    <view style='background-color:#F0F8FF ;margin-top:10px;margin-bottom:10px;'>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);font-weight:bold">步骤二：</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;"><text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;color:#3C78D8;">提交订单信息</text></text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#434343;">返回退出支付界面！</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#3C78D8;">不要支付！！</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#3C78D8;">此时价格为0，默认无效！</text>
+      </view>
+    </view>
+
+    <view style='margin-bottom:10px;background-color:#70DB93'>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);font-weight:bold">步骤三：</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#3C78D8;">等待专门网站维护人员与您取得联系</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;">定制专属优惠价格。</text>
+      </view>
+    </view>
+
+    <view style='margin-bottom:10px;background-color:#8F8FBD '>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style='font-weight:bold' style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);">步骤四：</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;">在订单中心里，</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;">找到该条未完成支付的订单，</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;">这时细心的您会发现</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;">订单里面已经有了您的专属优惠价格！</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;color:#3C78D8;">选择支付即可！</text>
+      </view>
+      <view style="text-align:center;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin-top:0px;margin-bottom:0px;padding:0px;line-height:2em;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="-webkit-tap-highlight-color:rgba(0, 0, 0, 0);margin:0px;padding:0px;font-size:14px;">这表明：恭喜您，订购成功了！</text>
+      </view>
+    </view>
+  </view>
+
+  <view style='background-color:#fff; position:relative;min-height:500px;'>
+    <image style='width:100%;height:500px;' src='../img/bg-5-3.jpg'></image>
+    <view style='position:absolute;left:0;right:0;top:0;bottom:0;padding-top:20px;'>
+      <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;color:#434343;"><text style='font-weight:bold' >专家预约<br />
+</text></text>
+      </view>
+      <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#434343;">— —</text>
+        <text style="margin:0px;padding:0px;font-size:10px;color:#FFFFFF;"><br />
+</text>
+      </view>
+      <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#666666;">Expert appointment</text>
+      </view>
+
+      <view class="section" style='padding-top:20px;'>
+        <view style='background-color:#fff;margin-top:30px;margin-left:20px;margin-right:20px;position:relative;'>
+          <input data-key='hospital' value='{{appointment.hospital}}' bindblur="inputDone" placeholder="预约医院(必填)" />
+        </view>
+        <view style='background-color:#fff;margin-top:30px;margin-left:20px;margin-right:20px;position:relative;'>
+          <input data-key='expertName' value='{{appointment.expertName}}' bindblur="inputDone" placeholder="专家名称(必填)" />
+        </view>
+        <view style='background-color:#fff;margin-top:30px;margin-left:20px;margin-right:20px;position:relative;'>
+          <input data-key='idCard' value='{{appointment.idCard}}' bindblur="inputDone" placeholder="您的身份证号码(必填)" />
+        </view>
+        <view style='background-color:#fff;margin-top:30px;margin-left:20px;margin-right:20px;position:relative;'>
+          <input data-key='costumerName' value='{{appointment.costumerName}}' bindblur="inputDone" placeholder="您的姓名(必填)" />
+        </view>
+        <view style='background-color:#fff;margin-top:30px;margin-left:20px;margin-right:20px;position:relative;'>
+          <input data-key='tel' value='{{appointment.tel}}' bin dblur="inputDone" placeholder="您的电话(必填)" />
+        </view>
+
+        <view style='background-color:#fff;margin-top:30px;margin-left:20px;margin-right:20px;'>
+          <button bindtap='submit' type='primary'>提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='text-align:center; background-color:#fff;padding-top:30px;border-top:1px dashed #ddd;'>
+    <text style='color:#3C78D8;font-size:18px;font-weight:bold'>点击购买↓↓提交订单后返回哦！</text>
+    <view style='margin-top:30px;margin-bottom:30px;'>
+      <button bindtap='buyMedicine' type='primary'>立即购买</button>
+    </view>
+  </view>
+</view>
+<include src="../footer/footer.wxml" />

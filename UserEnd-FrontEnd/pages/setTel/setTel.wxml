@@ -1,0 +1,17 @@
+<include src="../header/header.wxml" />
+
+<view style='min-height:200px'>
+  <view style='margin:20px 20px;background-color:white;border-radius:10px;'>
+    <text>当前手机号码:{{tel}}<text wx:if="{{!tel}}">无</text></text>
+  </view>
+
+  <view style='margin-left:20px;margin-right:20px;background-color:white;border-radius:10px;'>
+    <input value='{{newTel}}' bindblur='inputDone' placeholder="请在此输入您新的联系方式" auto-focus/>
+  </view>
+
+  <view style='margin:20px 20px;'>
+    <button bindtap='changeTel' type='primary'>提交修改</button>
+  </view>
+</view>
+
+<include src="../footer/footer.wxml" />

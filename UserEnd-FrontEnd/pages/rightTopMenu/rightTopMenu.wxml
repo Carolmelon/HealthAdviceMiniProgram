@@ -1,0 +1,5 @@
+<picker bindchange="bindPickerChange" value="{{value}}" range="{{menusArray}}">
+  <view style='position:fixed;right:20rpx;top:10rpx;z-index:99'>
+    <image style='width:40px;height:40px;' src='../img/menu.png'></image>
+  </view>
+</picker>

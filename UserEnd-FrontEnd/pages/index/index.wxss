@@ -1,0 +1,25 @@
+@import "../../weui.wxss";
+
+page {
+  background-color: #ffffff;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.indexTitle {
+  color: rgb(30, 126, 166); 
+  font-size: 20px; 
+  text-align: center; 
+  font-weight: bold;
+  padding: 5px 0 5px 0;
+}
+
+.icons {
+  background-color: #fafafa;
+  min-height: 50px;
+}
+
+.iconsInner {
+  background-color: #fff;
+}

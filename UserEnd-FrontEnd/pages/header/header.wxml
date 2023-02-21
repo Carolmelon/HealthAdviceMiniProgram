@@ -1,0 +1,35 @@
+<!--pages/components/header.wxml-->
+<view class="page">
+  <view style='height: 23px; background-color: rgb(231, 244, 255);font-size:12px;padding-left:20px'>
+    <navigator style='display:inline-block' open-type="reLaunch" url="../index/index">
+      <text style='color:#2d79ce'>首页</text>
+    </navigator>
+    <text style='padding-left:10px;padding-right:10px;'>|</text>
+    <navigator style='display:inline-block' url="../setTel/setTel">
+      <text style='color:#2d79ce'>修改联系方式</text>
+    </navigator>
+    <text style='padding-left:10px;padding-right:10px;'>|</text>
+    <navigator style='display:inline-block' url="../trueUserCenter/trueUserCenter">
+      <text style='color:#2d79ce'>用户中心</text>
+    </navigator>
+  </view>
+  <view class='indexTitle' style="color: rgb(30, 126, 166); font-size: 20px; text-align: center; font-weight: bold;padding: 5px 0 5px 0;">
+    卓越壹生健康管理有限公司
+  </view>
+  <view>
+    <view>
+      <swiper circular="{{true}}" style='height:200px;' indicator-dots="{{true}}" autoplay="{{true}}" interval="5000" duration="1000">
+        <block>
+          <swiper-item>
+            <image src="../img/w-banner-1.jpg" class="slide-image" style='width: 750rpx;' />
+          </swiper-item>
+          <swiper-item>
+            <image src="../img/w-banner.jpg" class="slide-image" style='width: 750rpx;' />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view style='border-bottom: 2px solid #eee; height: 10px;'></view>
+</view>
+<my-menu></my-menu>

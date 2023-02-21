@@ -1,0 +1,97 @@
+<view class="page" style='position:fixed;left:0;right:0;top:0;height:51px;z-index:99;background-color:white;opacity:1;overflow:hidden'>
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar" style='overflow:hidden;'>
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel" style='min-height:10px'>
+        <view class="weui-tab__content">
+          <view class="page__hd">
+            <view style='min-height:1px;'></view>
+            <!-- <view class="page__title">My orders</view>
+            <view class="page__desc">我的订单</view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style='height:100px;'></view>
+
+<view class="title-list" style='padding-bottom: 20px;'>
+  <view wx:if="{{!tradeDatas.trades.length}}" style='text-align:center'>
+    <image src='../img/order.png' mode='widthFix' style='width:300rpx; margin: 0 auto;margin-bottom:10px'></image>
+  </view>
+  <view wx:for="{{tradeDatas.trades}}" wx:key="{{item.id}}" class="title-item">
+    <view class="page__bd">
+      <view class="weui-form-preview">
+        <view class="weui-form-preview__hd">
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">付款金额</view>
+            <view class="weui-form-preview__value_in-hd">￥{{item.total_price}}</view>
+          </view>
+        </view>
+        <view class="weui-form-preview__bd">
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">商品</view>
+            <view class="weui-form-preview__value">{{item.product_name}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">数量</view>
+            <view class="weui-form-preview__value">{{item.amount}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">订单生成时间</view>
+            <view class="weui-form-preview__value">{{item.time}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">订单号</view>
+            <view class="weui-form-preview__value">{{item.trade_id}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">订单状态</view>
+            <view class="weui-form-preview__value">{{item.trade_status_text}}</view>
+          </view>
+        </view>
+        <view class="weui-form-preview__ft">
+          <text data-trade-id='{{item.trade_id}}' class="weui-form-preview__btn weui-form-preview__btn_primary" 
+          hover-class="weui-form-preview__btn_active" 
+          bindtap='gotoTradeDetails'>查看订单</text>
+          <text data-trade-id='{{item.trade_id}}' class="weui-form-preview__btn weui-form-preview__btn_primary" 
+          hover-class="weui-form-preview__btn_active" wx:if="{{item.trade_status==1}}"
+          bindtap='deleteTrade'>删除订单</text>
+          <text data-trade-id='{{item.trade_id}}' class="weui-form-preview__btn weui-form-preview__btn_primary" 
+          hover-class="weui-form-preview__btn_active" wx:if="{{item.trade_status==1}}"
+          bindtap='payNow'>立即支付</text>
+          <text data-trade-id='{{item.trade_id}}' class="weui-form-preview__btn weui-form-preview__btn_primary" 
+          hover-class="weui-form-preview__btn_active" wx:if="{{item.trade_status==2}}"
+          bindtap='remindLaunch'>提醒发货</text>
+          <text data-trade-id='{{item.trade_id}}' class="weui-form-preview__btn weui-form-preview__btn_primary" 
+          hover-class="weui-form-preview__btn_active" wx:if="{{item.trade_status==2}}"
+          bindtap='sureTrade'>确认收货</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='position: relative; height: 50px;'>
+    <button type='primary' bindtap='previousPage' size='mini' style='position:absolute;left:20px;'>
+      上一页
+    </button>
+    <button type='primary' bindtap='nextPage' size='mini' style='position:absolute;right:20px;'>
+      下一页
+    </button>
+    <picker bindchange="bindPickerChange" value="{{tradeDatas.currentPage-1}}" range="{{pagesArray}}">
+      <view class="picker" style='text-align:center;'>
+        跳转指定页：{{pagesArray[tradeDatas.currentPage-1]}}
+        <text wx:if="{{!pagesArray.length}}">0</text>
+      </view>
+    </picker>
+  </view>
+  <view style='color: #929292; text-align:center'>共 {{tradeDatas.total}} 条 共 {{tradeDatas.pages}} 页</view>
+</view>

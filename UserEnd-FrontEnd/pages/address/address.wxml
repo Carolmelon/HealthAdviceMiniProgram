@@ -1,0 +1,5 @@
+<!--pages/address/address.wxml-->
+<view class='address'>
+  <text>成都卓越壹生健康管理有限公司</text>
+</view>
+<map id="map" longitude="105.434204" latitude="28.893852" scale="20" markers="{{markers}}" show-location style="width: 100%; height: 500px;"></map>

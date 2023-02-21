@@ -1,0 +1,60 @@
+<view wx:if="{{show_banner}}">
+  <include src="../header/header.wxml" /> 
+</view>
+
+<view style="background-color:white;">
+    <view style="height:5px;"></view>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <strong style="font-weight:bold">{{title_text}}</strong>
+    </view>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#D9D9D9;">— —<br />
+        </text>
+    </view>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#D9D9D9;">\n</text>
+    </view>
+
+    <view style="height:10px;border-top:1px solid #eee;"></view>
+
+    <view class="title-list" style='padding-bottom: 20px;'>
+        <view wx:for="{{articleDatas.articles}}" wx:key="{{item.id}}" class="title-item">
+
+          <view data-id="{{item.id}}" class="" bindtap='gotoArticleDetail' 
+          style='padding-left:10px; padding-right:10px; padding-bottom: 10px;'>
+            <view class="">
+              <view class="">
+                  <image class="article_img" src="{{url_prefix + item.img}}" style="width:100%;border-radius:20rpx;" />
+              </view>
+              <view class="article_title" style='color: #444; font-size: 16px;'>{{item.title}}</view>
+              <view class="article_time" style='color: #929292; font-size: 12px;'>
+                {{item.time}}
+              </view>
+              <view class="article_digest"  style='color: #929292; font-size: 15px;'>
+                  {{item.digest}}
+              </view>
+              </view>
+            </view>
+        </view>
+        <view style='position: relative; height: 50px;'>
+          <button type='primary' bindtap='previousPage' size='mini' style='position:absolute;left:20px;'>
+            上一页
+          </button>
+          <button type='primary' bindtap='nextPage' size='mini' style='position:absolute;right:20px;'>
+            下一页
+          </button>
+          <picker bindchange="bindPickerChange" value="{{articleDatas.currentPage-1}}" range="{{pagesArray}}">
+            <view class="picker" style='text-align:center;'>
+              跳转指定页：{{pagesArray[articleDatas.currentPage-1]}}
+            </view>
+          </picker>
+        </view>
+        <view style='color: #929292; text-align:center'>共 {{articleDatas.total}} 条   共 {{articleDatas.pages}} 页</view>
+    </view> 
+</view>
+
+<view style='height:10px;'></view>
+
+<view wx:if="{{show_banner}}">
+  <include src="../footer/footer.wxml" />
+</view>

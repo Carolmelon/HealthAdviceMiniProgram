@@ -1,0 +1,45 @@
+<include src="../header/header.wxml" />
+
+<view style="background-color: #fff;">
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="font-weight:bold">关于我们</text> 
+    </view>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#D9D9D9;">— —<br />
+        </text> 
+    </view>
+    <view style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;">
+        <text style="margin:0px;padding:0px;font-size:10px;color:#D9D9D9;">About us</text> 
+    </view>
+</view>
+
+<view style="border-top: 1px solid #eee; padding-left:10px;padding-right:10px; background-color: #fff;">
+    <view style="margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;text-align:justify;line-height:1.75em;">
+	<text decode="{{true}}" style="margin:0px;padding:0px;font-size:14px;color:#909090;">\n&nbsp; &nbsp; &nbsp; &nbsp;卓越壹生健康管理有限公司（简称卓越医生），公司位于美丽的酒城----泸州，专注为客户提供全面和优质的个性化健康管理服务，公司率先引入先进的居家护理服务理念，依托自身拥有的国内优质医疗资源，全力打造符合中国国情的居家健康服务体系，以满足客户不同层次的健康需求！</text>
+    </view>
+    <view style="margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;text-align:justify;line-height:1.75em;">
+        <text decode="{{true}}" style="margin:0px;padding:0px;font-size:14px;color:#909090;"><br />
+    </text>
+    </view>
+    <view style="margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;text-align:justify;line-height:1.75em;">
+        <text decode="{{true}}" style="margin:0px;padding:0px;font-size:14px;color:#909090;">\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 卓越医生提供一系列的健康服务，在四川省健康管理学会的专业指导下，服务产品更是具备行业领先、护理专业的优势。服务内容涵括个性化家庭健康管理服务、企事业单位健康管理整体方案与服务两大方面，通过严谨的健康评估，为每位客户量身订制专属的服务方案，协助客户控管健康风险、减缓病痛、有效康复、科学就医……全面提升客户健康指数！</text>
+    </view>
+    <view style="margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;text-align:justify;line-height:1.75em;">
+        <text style="margin:0px;padding:0px;font-size:14px;color:#909090;"><br />
+    </text>
+    </view>
+    <view style="margin-top:0px;margin-bottom:0px;padding:0px;color:#5A5A5A;font-family:&quot;font-size:16px;white-space:normal;text-align:justify;line-height:1.75em;">
+        <text decode="{{true}}" style="margin:0px;padding:0px;font-size:14px;color:#909090;">\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 卓越医生拥有一支具备多年三甲医院一线服务经历、实力雄厚的医护服务团队，汇聚川南地区各大知名医院的医学专家、康复师等医护资源，同时致力完善医疗资源数据库，确保客户享受高质、高效的服务！\n\n<br />
+    </text>
+    </view>
+
+    <view style="">
+        <text style="font-weight:bold">企业文化</text>
+        <view style="height:3px; border-bottom:1px dashed #ddd;"></view>
+        <text style="color:#909090;font-family:&quot;font-size:14px;text-align:justify;white-space:normal;">公司使命：致力倡导预防医学及居家康复的观念，为中华民族健康素质的提升贡献正能量！\n</text><br style="color:#909090;font-family:&quot;font-size:14px;text-align:justify;white-space:normal;" />
+        <text style="color:#909090;font-family:&quot;font-size:14px;text-align:justify;white-space:normal;">服务理念：精客户所需，急客户所急！\n</text><br style="color:#909090;font-family:&quot;font-size:14px;text-align:justify;white-space:normal;" />
+        <text style="color:#909090;font-family:&quot;font-size:14px;text-align:justify;white-space:normal;">服务宗旨：标准化、专业化、个性化\n\n\n</text>
+    </view>
+</view>
+
+<include src="../footer/footer.wxml" />

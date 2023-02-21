@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-menu": "../rightTopMenu/rightTopMenu"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/homeHealthManage/homeHealthManage",
+    "pages/trueUserCenter/trueUserCenter",
+    "pages/tradeList/tradeList",
+    "pages/tradeDetails/tradeDetails",
+    "pages/jkzn/jkzn",
+    "pages/comfirmTrade/comfirmTrade",
+    "pages/usercenter/usercenter",
+    "pages/setTel/setTel",
+    "pages/ypdg/ypdg",
+    "pages/phoneCall/phoneCall",
+    "pages/address/address",
+    "pages/aboutUs/aboutUs",
+    "pages/videoQuery/videoQuery",
+    "pages/articleDetail/articleDetail",
+    "pages/cashierDesk/cashierDesk",
+    "pages/productDetail/productDetail",
+    "pages/grtj/grtj",
+    "pages/zjyy/zjyy",
+    "pages/tgtj/tgtj",
+    "pages/hyzc/hyzc"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "卓越壹生",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#292929"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#09bb07",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/img/home.png",
+        "selectedIconPath": "pages/img/home1.png"
+      },
+      {
+        "pagePath": "pages/phoneCall/phoneCall",
+        "text": "电话",
+        "iconPath": "pages/img/telephone.png",
+        "selectedIconPath": "pages/img/telephone (1).png"
+      },
+      {
+        "pagePath": "pages/address/address",
+        "text": "地址",
+        "iconPath": "pages/img/Address fill.png",
+        "selectedIconPath": "pages/img/Address fill (1).png"
+      },
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "体验档案",
+        "iconPath": "pages/img/me.png",
+        "selectedIconPath": "pages/img/me1.png"
+      }
+    ]
+  }
+}

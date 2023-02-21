@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "体验档案",
+  "usingComponents": {
+    "my-menu": "../rightTopMenu/rightTopMenu"
+  }
+}

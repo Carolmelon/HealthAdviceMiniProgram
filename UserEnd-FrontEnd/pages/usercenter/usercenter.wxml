@@ -1,0 +1,82 @@
+<include src="../header/header.wxml" />
+
+<view style='margin-top:10px;position:relative;height:30px;text-align:center;color:white;border:2px solid #09bb07;border-radius:7px'>
+  <view wx:if="{{child_page==1}}" style='position:absolute;width:33%;top:0;height:30px;background:#09bb07;'>个人档案</view>
+  <view wx:else bindtap='changeChildPage' data-id="1" style='position:absolute;width:33%;top:0;height:30px;background:#888;'>个人档案</view>
+  <view wx:if="{{child_page==2}}" style='position:absolute;width:33%;top:0;left:33.5%;height:30px;background:#09bb07;'>专家建议</view>
+  <view wx:else bindtap='changeChildPage' data-id="2" style='position:absolute;width:33%;top:0;left:33.5%;height:30px;background:#888;'>专家建议</view>
+  <view wx:if="{{child_page==3}}" style='position:absolute;width:33%;top:0;left:67%;;height:30px;background:#09bb07;'>图片资料</view>
+  <view wx:else bindtap='changeChildPage' data-id="3" style='position:absolute;width:33%;top:0;left:67%;;height:30px;background:#888'>图片资料</view>
+</view>
+
+<!--公用文章列表-->
+<view class="title-list" style='padding-bottom: 20px;margin-top:20px;'>
+  <view class="" wx-if="{{!articleDatas.articles.length}}" style='background-color;border-bottom:1px dashed #ddd;margin-bottom:20px;'>
+    <text class="article_title" style='display:inline-block;color: #444; font-size: 16px;padding-left:50rpx;'>无内容</text>
+  </view>
+  <view wx:for="{{articleDatas.articles}}" wx:key="{{item.id}}" class="title-item">
+    <view data-id="{{item.id}}" class="" bindtap='gotoArticleDetail' style='padding-left:10px; padding-right:10px; padding-bottom: 10px;'>
+      <view class="" style='background-color;border-bottom:1px dashed #ddd;'>
+        <text class="article_title" style='display:inline-block;color: #444; font-size: 16px;padding-left:50rpx;'>{{item.title}}</text>
+        <text class="article_time" style='display:inline-block;color: #929292; font-size: 12px;float:right;'>
+            {{item.time}}
+          </text>
+      </view>
+    </view>
+  </view>
+  <view style='position: relative; height: 50px;'>
+    <button type='primary' bindtap='previousPage' size='mini' style='position:absolute;left:20px;'>
+      上一页
+    </button>
+    <button type='primary' bindtap='nextPage' size='mini' style='position:absolute;right:20px;'>
+      下一页
+    </button>
+    <picker bindchange="bindPickerChange" value="{{articleDatas.currentPage-1}}" range="{{pagesArray}}">
+      <view class="picker" style='text-align:center;'>
+        跳转指定页：{{pagesArray[articleDatas.currentPage-1]}}
+      </view>
+    </picker>
+  </view>
+  <view style='color: #929292; text-align:center'>共 {{articleDatas.total}} 条 共 {{articleDatas.pages}} 页</view>
+</view>
+<!--公用文章列表-->
+
+
+<view wx:if="{{images.length}}" style='position:relative;height:100px;padding-left:80px;margin-top:20px;'>
+  <view style='position:absolute;right:20px;'>
+    <block wx:for="{{images}}" wx:key="*this">
+      <view class="q-image-wrap" style='display:inline-block;margin-right:20px;'>
+        <!-- 图片缩略图  -->
+        <image class="q-image" src="{{item}}" style='width:50px;height:50px;' data-idx="{{index}}" bindtap="handleImagePreview"></image>
+        <!-- 移除图片的按钮  -->
+        <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view style='min-height:200px;position:relative;'>
+  <view style='position:relative;height:60px;'>
+    <view style='display:inline-block;position:absolute;left:100rpx;'>资料上传
+      <text style='color:red'>*</text>
+    </view>
+    <view style='display:inline-block;position:absolute;right:100rpx;'>
+      <button size='mini' bindtap='chooseImg'>图片/拍照(不超过2M)</button>
+    </view>
+  </view>
+  <view style='position:relative;height:60px;'>
+    <view style='display:inline-block;position:absolute;left:100rpx;'>姓名
+      <text style='color:red'>*</text>
+    </view>
+    <view style='display:inline-block;background-color:white;position:absolute;right:60rpx;'>
+      <input value='{{name}}' bindblur="changeName" placeholder="姓名(必填)" />
+    </view>
+  </view>
+  <view style='relative;height:60px;'>
+    <view style='position:absolute;right:60rpx;width:350rpx'>
+      <button bindtap='submit' type='primary'>提交</button>
+    </view>
+  </view>
+</view>
+
+<include src="../footer/footer.wxml" />

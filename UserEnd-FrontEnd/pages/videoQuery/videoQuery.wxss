@@ -1,0 +1,5 @@
+/* pages/videoQuery/videoQuery.wxss */
+.page {
+  min-height: 550px;
+  background-color: white;
+}

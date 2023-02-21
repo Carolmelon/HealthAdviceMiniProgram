@@ -1,0 +1,26 @@
+<view wx:if="{{show_banner}}">
+  <include src="../header/header.wxml" />
+</view>
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view wx:if="{{article}}" style='background-color: white;padding:10px;'>
+  <view style='text-align:center; color:#444; font-size:18px;padding-bottom:10px;'>{{article.title}}</view>
+  <view style='text-align:center; font-size:12px;'>发布时间: {{article.time}}</view>
+  <view style='font-size:12px; color: #999;border: 1px solid #ddd; border-radius:5px;text-align:{{center}}'>
+    <text decode="{{true}}">&nbsp; &nbsp; &nbsp; &nbsp;{{article.digest}}</text>
+  </view>
+  <view style='height:20px;'></view>
+</view>
+
+<view style='text-align:center;background-color:#fff' wx:if="{{show_img}}">
+  <image style='width:600rpx;border-radius:30rpx' mode='widthFix' src="{{url_prefix + article.img}}"></image>
+</view>
+
+<view style='background-color: white;margin-bottom:20px;padding-left:5px;padding-right:5px;'>
+  <template is="wxParse" data="{{wxParseData:wxml.nodes}}"/>
+  <view style='height:20px;'></view>
+</view>
+
+<view wx:if="{{show_banner}}">
+  <include src="../footer/footer.wxml" />
+</view>

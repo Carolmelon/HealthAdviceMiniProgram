@@ -1,0 +1,26 @@
+<include src="../header/header.wxml" />
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view wx:if="{{product}}" style='background-color: white;margin-top:-100rpx;padding:20rpx;margin-bottom:20px;'>
+  <view style='position:relative; height:600rpx;'>
+    <view style='position:absolute; left:0;top:40rpx;margin-top:-30rpx;'>
+      <image style='width:300rpx;' src='{{url_prefix + product.img}}' mode='aspectFit'></image>
+    </view>
+    <view style='position:absolute; right:0;top:0;min-height:200px;padding-left:10rpx; width:400rpx;'>
+      <view style='color:#666; font-size:18px; padding-top:130rpx;'>{{product.name}}</view>
+      <view style='height:2px; border-top:1px solid #ddd;'></view>
+      <view style='font-size:12px;'>价格:￥
+        <text style='color: red;font-size: 18px;'>{{product.price}}</text>
+      </view>
+      <text style='font-size:12px;'>数量</text>
+      <slider bindchange="slider2change" min="1" max="50" step="1"  show-value/>
+    </view>
+    <view style='position:absolute;bottom:0;width:700rpx;'>
+      <button type='primary' bindtap='gotoCashierDesk'>立即购买</button>
+    </view>
+  </view>
+  <view style='height: 30px;'></view>
+  <template is="wxParse" data="{{wxParseData:wxml.nodes}}"/>
+</view>
+
+<include src="../footer/footer.wxml" />
