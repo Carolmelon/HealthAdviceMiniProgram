@@ -25,12 +25,12 @@
 
 # 演示
 
-- 小程序用户端的一个演示视频
+- 小程序**用户端**的一个演示视频，<a href='Illustrations/小程序用户端＋邮件提醒.mp4'>点击</a>跳转到演示视频
 
 <video src='Illustrations/小程序用户端＋邮件提醒.mp4' width='30%'></video>
 
 
-- 小程序管理端的一个演示视频
+- 小程序**管理端**的一个演示视频，<a href='Illustrations/小程序管理端.mp4'>点击</a>跳转到演示视频
 
 <video src='Illustrations/小程序管理端.mp4' width='90%'></video>
 
